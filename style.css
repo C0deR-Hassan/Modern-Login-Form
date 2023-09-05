@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" ,sans-serif;
+}
+body {
+    background: #081b29;
+}
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .wrap {
+    width: 650px;
+    height: 350px;
+    border: 1px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.wrap form {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.95;
+}
+form h2 {
+    font-size: 1.7em;  
+    margin: 40px 0 0;
+}
+form .input-box {
+    margin: 23px 0;
+    position: relative;
+}
+form .username-box {
+    margin: 19px 0 0;
+}
+.input-box input {
+    width: 80%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #0ef;
+    background: transparent;
+    padding: 10px 20px 10px 2px;
+    box-sizing: border-box;
+    color: #0ef;
+}
+.input-box label {
+    font-size: 0.85em;
+    position: absolute;
+    top: 60%;
+    left: 35px;
+    transform: translateY(-60%);
+    pointer-events: none;
+    transition: 0.3s;
+    color: #0ef;
+    font-weight: 500;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    font-size: 0.8em;
+    top: -2px;
+}
+.input-box ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+    color: #0ef;
+}
+.btn {
+    width: 80%;
+    border: 1px solid rgb(32, 196, 207);
+    border-radius: 40px;
+    padding: 8px 0;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: linear-gradient( #081b29, #0ef, #081b29, #0ef);
+    width: 100%;
+    height: 300%;
+    z-index: -1;
+    transition: 0.4s;
+}
+.btn:hover::before {
+    top: 0;
+}
+form p {
+    font-size: 0.75em;
+    padding: 15px 0;
+    color: #0ef;
+    font-weight: 500;
+}
+form p a {
+    text-decoration: none;
+    color: #0ef;
+    font-weight: 600;
+    padding: 0 3px;
+}
+form p a:hover {
+    text-decoration: underline;
+}
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 40px;
+}
+.text h3 {
+    color: #fff;
+    font-size: 1.85em;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+.text p {
+    font-size: 0.75em;
+    color: #fff;
+}
+.wrap .bg-silver {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(45deg, #081b29, #0ef);
+    width: 800px;
+    height: 480px;
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    z-index: -1;
+}
